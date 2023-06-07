@@ -1,6 +1,5 @@
 .main-nav {
   &__list {
-    display: flex;
     margin: 0;
     margin-right: 20px;
     margin-left: 60px;
@@ -25,3 +24,24 @@
     display: none;
   }
 }
+
+.authorized {
+  .authorized__nav {
+    display: flex;
+  }
+
+  .not-authorized__nav {
+    display: none;
+  }
+}
+
+.not-authorized {
+  .authorized__nav {
+    display: none;
+  }
+
+  .not-authorized__nav {
+    display: flex;
+  }
+}
+

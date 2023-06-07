@@ -2,16 +2,20 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "Подключение"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Оплата"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Контакты"
+      },
+      {
+        href: "#",
+        text: "Выход"
       },
     ]
 
@@ -19,18 +23,23 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("logo", 55, 40)
+          span tocha
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 55, 40)
+          span tocha
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
-          ul.main-nav__list
+          ul.main-nav__list.authorized__nav
             each link in headerLinks
-              - const activeState = currentUrl === link.href
               li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+                a.main-nav__link(href=link.href)=link.text
+          ul.main-nav__buttons.not-authorized__nav
+            li.main-nav__button
+              a.main-nav__entrance(href="#") Вход
+            li.main-nav__button
+              a.main-nav__registration(href="#") Регистрация
