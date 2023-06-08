@@ -17,6 +17,16 @@ const pug = require('gulp-pug');
 const cached = require('gulp-cached');
 const gcmq = require('gulp-group-css-media-queries');
 
+const ghPages = require('gh-pages');
+const path = require('path');
+
+const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
+exports.deploy = deploy;
+
+
 const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
       .pipe(plumber())
