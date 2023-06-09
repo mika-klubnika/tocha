@@ -1,5 +1,10 @@
 mixin intro()
   .intro
     .container
-      h1 Telegram чат на вашем сайте
-      p Общение с клиентами станет простым и удобным, а подключение займет 5 минут. Первый месяц — бесплатно!
+      .intro__wrapper
+        .intro__text
+          h1.title.title--h1 <span class="color-purple">Telegram чат</span> <br> на вашем сайте
+          p Общение с&nbsp;клиентами станет простым и&nbsp;удобным, а&nbsp;подключение займет 5&nbsp;минут. Первый месяц — <span class="color-purple">бесплатно!</span>
+          +btn({href:"#", text: "Подключить"}).btn--purple
+        .intro__image
+          +icon("main-screen", 725, 583)

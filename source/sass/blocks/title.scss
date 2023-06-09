@@ -1,0 +1,23 @@
+.title {
+  margin: 0;
+
+  &--h1 {
+    margin-bottom: 24px;
+
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+
+    @include vp-1439 {
+      margin-bottom: size-desktop(24px);
+
+      font-size: size-desktop(50px);
+      line-height: size-desktop(60px);
+    }
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}

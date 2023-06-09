@@ -66,3 +66,14 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.color-purple {
+  font-weight: 800;
+  color: $color-slate-blue;
+}

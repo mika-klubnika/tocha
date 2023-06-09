@@ -21,25 +21,17 @@ mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo
-          +icon("logo", 55, 40)
-          span tocha
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
-          +icon("logo", 55, 40)
-          span tocha
+      +logo().logo--header
+      button.header__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("icon-burger", 20, 20)
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
         .main-nav__wrapper
-          ul.main-nav__list.authorized__nav
+          ul.main-nav__list.authorized__nav.list
             each link in headerLinks
               li.main-nav__item
                 a.main-nav__link(href=link.href)=link.text
-          ul.main-nav__buttons.not-authorized__nav
+          ul.main-nav__buttons.not-authorized__nav.list
             li.main-nav__button
-              a.main-nav__entrance(href="#") Вход
+              +btn({href:"#", text: "Вход"}).btn--pink.main-nav__entrance
             li.main-nav__button
-              a.main-nav__registration(href="#") Регистрация
+              +btn({href:"#", text: "Регистрация"}).btn--purple.main-nav__registration

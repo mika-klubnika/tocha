@@ -11,12 +11,12 @@ body {
 }
 
 html {
-  font-style: normal;
+  font-family: $ff-default;
   font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-style: normal;
+  font-size: size-desktop($fz-default);
+  line-height: size-desktop(26px);
+  color: $color-dark;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,6 +24,11 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @include vp-1439 {
+    font-size: $fz-default;
+    line-height: 26px;
+  }
 }
 
 body {

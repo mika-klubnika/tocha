@@ -24,9 +24,6 @@ const deploy = (cb) => {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
 
-exports.deploy = deploy;
-
-
 const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
       .pipe(plumber())
@@ -164,5 +161,7 @@ const build = gulp.series(clean, svgo, copy, css, sprite, js, pugToHtml, optimiz
 
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;
+exports.server = syncServer;
 exports.start = start;
 exports.build = build;
+exports.deploy = deploy;
