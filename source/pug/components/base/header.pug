@@ -3,19 +3,20 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Подключение"
+        text: "Подключение",
+        class: "color-purple",
       },
       {
         href: "#",
-        text: "Оплата"
+        text: "Оплата",
       },
       {
         href: "#",
-        text: "Контакты"
+        text: "Контакты",
       },
       {
         href: "#",
-        text: "Выход"
+        text: "Выход",
       },
     ]
 
@@ -29,7 +30,7 @@ mixin header(headerMods, currentUrl)
           ul.main-nav__list.authorized__nav.list
             each link in headerLinks
               li.main-nav__item
-                a.main-nav__link(href=link.href)=link.text
+                a(href=link.href, class!=link.class)=link.text
           ul.main-nav__buttons.not-authorized__nav.list
             li.main-nav__button
               +btn({href:"#", text: "Вход"}).btn--pink.main-nav__entrance

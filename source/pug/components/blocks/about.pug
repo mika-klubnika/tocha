@@ -1,0 +1,54 @@
+mixin about()
+  -
+    const aboutList = [
+      {
+        icon: {
+          name: "plane",
+          width: 68,
+          height: 68,
+        },
+        title: "Ничего лишнего",
+        text: "Отсутствие лишних приложений для операторов. Оператору не&nbsp;нужно учиться работать с&nbsp;чатом",
+      },
+      {
+        icon: {
+          name: "simplicity",
+          width: 68,
+          height: 68,
+        },
+        title: "Простота",
+        text: "Простая установка на&nbsp;сайт",
+      },
+      {
+        icon: {
+          name: "assistants",
+          width: 68,
+          height: 68,
+        },
+        title: "Несколько ассистентов",
+        text: "Возможность подключения нескольких ассистентов",
+      },
+      {
+        icon: {
+          name: "customization",
+          width: 68,
+          height: 68,
+        },
+        title: "Кастомизация",
+        text: "Настройка интерфейса под нужды сайта",
+      },
+    ]
+
+  section.about
+    .container
+      .about__wrapper
+        .about__text
+          h2.title.title--h2.about__title Tocha Online — это
+          ul.about__list.list
+            each item in aboutList
+              li.about__item
+                +icon(...item.icon)
+                h3!= item.title
+                p!= item.text
+        .about__image
+          +picture("content", "about-phone", "png", 411, 666, "телефон с чатом")

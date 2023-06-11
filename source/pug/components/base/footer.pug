@@ -1,4 +1,66 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        title: "Telegram чат",
+        list: [
+          {
+            href: "#",
+            text: "О нас",
+          },
+          {
+            href: "#",
+            text: "Партнеры",
+          },
+          {
+            href: "#",
+            text: "Инструкция",
+          },
+          {
+            href: "#",
+            text: "Цены",
+          },
+          {
+            href: "#",
+            text: "Контакты",
+          },
+        ],
+      },
+      {
+        title: "Поддержка",
+        list: [
+          {
+            href: "#",
+            text: "Центр поддержки",
+          },
+          {
+            href: "#",
+            text: "Политика <br> конфеденциальности",
+          },
+          {
+            href: "#",
+            text: "Документы оферта",
+          },
+          {
+            href: "#",
+            text: "Статус",
+          },
+        ],
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
-      +logo().logo--footer
+      .footer__wrapper
+        +logo().logo--footer
+        .footer__nav
+          each item in footerLinks
+            .footer__inner
+              h3.footer__title!= item.title
+              ul.footer__list.list
+                each link in item.list
+                  li.footer__item
+                    a(href=link.href)!=link.text
+    .footer__copyright
+      .container
+        p © 2021 Tocha. Все права защищены
