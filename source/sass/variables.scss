@@ -13,6 +13,9 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-dark:                        #1D2530;
 $color-black-pearl:                 #141B23;
 $color-slate-blue:                  #685ED6;
+$color-perfume:                     #C39BFB;
+$color-summer-sky:                  #33AFE1;
+$color-bright-turquoise:            #18E1F7;
 $color-magnolia:                    #F1E4FF;
 $color-solitude:                    #F4F5F7;
 $color-solitude2:                   #EEEFF4;
@@ -22,6 +25,11 @@ $color-torch-red:                   #ff1553;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Shadow
+
+$shadow-black-07:                   0px 10px 20px rgba(0, 0, 0, 0.07);
+$shadow-black-14:                   0px 15px 30px rgba(0, 0, 0, 0.14);
 
 // Typography
 // ---------------------------------
