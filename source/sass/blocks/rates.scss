@@ -58,7 +58,6 @@
 
   &__item {
     width: size-desktop(350px);
-    background-color: $color-alice-blue;
     box-shadow: $shadow-black-07;
     border-radius: size-desktop(6px);
 
@@ -97,7 +96,7 @@
     padding: size-desktop(40px) size-desktop(30px);
 
     text-align: center;
-    color: $color-dark;
+    background-color: $color-alice-blue;
 
     @include vp-1439 {
       padding: 40px 30px;

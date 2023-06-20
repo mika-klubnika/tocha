@@ -1,0 +1,36 @@
+mixin steps()
+  -
+    const stepsList = [
+      {
+        number: 1,
+        title: "Telegram bot",
+        text: "Вы&nbsp;создаёте Telegram бота для вашего сайта",
+        img: ["slides/steps", "step-1", "png", 237, 471, "шаг 1"],
+      },
+      {
+        number: 2,
+        title: "Подключение",
+        text: "Подключает Telegram бота к&nbsp;вашиму сайту",
+        img: ["slides/steps", "step-2", "png", 281, 559, "шаг 2"],
+      },
+      {
+        number: 3,
+        title: "Telegram-чат",
+        text: "Консультант отвечает на&nbsp;вопросы посетителей сайта",
+        img: ["slides/steps", "step-3", "png", 237, 471, "шаг 3"],
+      },
+    ]
+
+  section.steps
+    .container
+      h2.title.title--h2.steps__title Всего 3 шага для подключения Telegram чата
+    .container.container--inner
+      .steps__slider.swiper(data-steps-slider)
+        ul.steps__list.list.swiper-wrapper
+          each item in stepsList
+            li.steps__item.swiper-slide(class=`steps__step${item.number}`)
+              .steps__number!= item.number
+              h3.title!= item.title
+              p!= item.text
+              +picture(...item.img)
+        .steps__pagination.swiper-pagination
