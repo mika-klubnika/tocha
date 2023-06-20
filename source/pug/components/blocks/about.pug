@@ -48,7 +48,7 @@ mixin about()
             each item in aboutList
               li.about__item
                 +icon(item.icon.name, item.icon.width, item.icon.height)
-                h3!= item.title
+                h3.title.title--h3!= item.title
                 p!= item.text
         .about__image
           +picture("content", "about-phone", "png", 411, 666, "телефон с чатом")

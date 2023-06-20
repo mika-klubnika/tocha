@@ -1,0 +1,179 @@
+.rates {
+  padding-top: size-desktop(100px);
+  padding-bottom: size-desktop(50px);
+
+  @include vp-1439 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-1023 {
+    padding-top: 54px;
+    padding-bottom: 34px;
+  }
+
+  &__title {
+    margin-bottom: size-desktop(15px);
+    text-align: center;
+
+    @include vp-1439 {
+      margin-bottom: 15px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    margin-bottom: size-desktop(40px);
+    text-align: center;
+
+    @include vp-1439 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__slider {
+    @include vp-1023 {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include vp-1439 {
+      justify-content: center;
+    }
+
+    @include vp-1199 {
+      justify-content: initial;
+    }
+  }
+
+  &__item {
+    width: size-desktop(350px);
+    background-color: $color-alice-blue;
+    box-shadow: $shadow-black-07;
+    border-radius: size-desktop(6px);
+
+    @include vp-1439 {
+      width: 350px;
+      border-radius: 6px;
+    }
+
+    @include vp-1023 {
+      width: 330px;
+    }
+
+    @include vp-374 {
+      width: 270px;
+    }
+  }
+
+  &__rate {
+    padding: size-desktop(7px);
+    font-weight: 800;
+    font-size: size-desktop(24px);
+    line-height: size-desktop(48px);
+    text-align: center;
+
+    color: $color-slate-blue;
+    background-color: $color-light-blue;
+
+    @include vp-1439 {
+      padding: 7px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  &__text-block {
+    padding: size-desktop(40px) size-desktop(30px);
+
+    text-align: center;
+    color: $color-dark;
+
+    @include vp-1439 {
+      padding: 40px 30px;
+    }
+
+    @include vp-374 {
+      padding: 30px 20px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: size-desktop(30px);
+      padding-right: size-desktop(15px);
+      padding-left: size-desktop(15px);
+
+      font-weight: 700;
+      font-size: size-desktop(28px);
+      line-height: size-desktop(40px);
+
+      @include vp-1439 {
+        margin-bottom: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      @include vp-1023 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include vp-374 {
+        font-size: 25px;
+      }
+    }
+
+    span {
+      font-weight: 500;
+      font-size: size-desktop(20px);
+      line-height: size-desktop(30px);
+
+      @include vp-1439 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .btn {
+      justify-content: center;
+      margin-top: size-desktop(45px);
+      width: 100%;
+      height: size-desktop(45px);
+
+      @include vp-1439 {
+        margin-top: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination {
+      bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+      border: 2px solid $color-slate-blue;
+      background: $color-transparent;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-slate-blue;
+      opacity: 1;
+    }
+  }
+}

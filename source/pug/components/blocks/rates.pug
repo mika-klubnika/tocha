@@ -1,0 +1,39 @@
+mixin rates()
+  -
+    const ratesList = [
+      {
+        rate: "Бесплатно",
+        text: "Пробный период на 1 месяц",
+        price: "0",
+        perMonth: "первый месяц",
+      },
+      {
+        rate: "Базовый",
+        text: "Менее 1000 посещений в сутки",
+        price: "200",
+        perMonth: "месяц",
+      },
+      {
+        rate: "Премиум",
+        text: "Более 1000 посещений в сутки",
+        price: "500",
+        perMonth: "месяц",
+      },
+    ]
+
+  section.rates
+    .container
+      h2.title.title--h2.rates__title Тарифы
+      p.title.title--h3.rates__text Стоимость зависит от трафика сайта
+    .container.container--inner
+      .rates__slider.swiper(data-rates-slider)
+        ul.rates__list.list.swiper-wrapper
+          each item in ratesList
+            li.rates__item.swiper-slide
+              .rates__rate!= item.rate
+              .rates__text-block
+                p!= item.text
+                span!= item.price + "₽/" + item.perMonth
+                a.btn.btn--purple!= "Подключить за " + item.price + "₽"
+        .rates__pagination.swiper-pagination
+
