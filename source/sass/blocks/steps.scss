@@ -27,10 +27,27 @@
   }
 
   &__slider {
-    padding-bottom: size-desktop(30px);
-
-    @include vp-1439 {
+    @include vp-1023 {
       padding-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      justify-content: initial;
+    }
+  }
+
+  &__item {
+    @include vp-1023 {
+      margin-right: 33px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -44,6 +61,14 @@
 
     @include vp-1023 {
       width: 211px;
+    }
+
+    img {
+      width: size-desktop(233px);
+
+      @include vp-1439 {
+        width: 233px;
+      }
     }
   }
 
@@ -59,6 +84,14 @@
     @include vp-1023 {
       padding-top: 0;
       width: 211px;
+    }
+
+    img {
+      width: size-desktop(276px);
+
+      @include vp-1439 {
+        width: 276px;
+      }
     }
   }
 
