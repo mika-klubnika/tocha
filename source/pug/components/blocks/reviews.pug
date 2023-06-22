@@ -70,8 +70,8 @@ mixin reviews()
                 h3.title!= item.review.title
                 p!= item.review.text
               .reviews__author
-                +img(...item.author.avatar)
+                +picture(...item.author.avatar)
                 .reviews__inner
                   h4.title!= item.author.name
                   span!= item.author.email
-        .reviews__pagination.swiper-pagination
+        .pagination.swiper-pagination

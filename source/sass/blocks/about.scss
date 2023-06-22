@@ -2,6 +2,8 @@
   padding-top: size-desktop(70px);
   padding-bottom: size-desktop(70px);
 
+  background-color: $color-white-blue;
+
   @include vp-1439 {
     padding-top: 60px;
     padding-bottom: 60px;

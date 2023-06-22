@@ -1,10 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {Burger} from './modules/burger/burger';
 import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
-import { initRatesSlider } from './modules/sliders/rates-slider';
-import { initStepsSlider } from './modules/sliders/steps-slider';
-import { initReviewsSlider } from './modules/sliders/reviews-slider';
+import {initRatesSlider} from './modules/sliders/rates-slider';
+import {initStepsSlider} from './modules/sliders/steps-slider';
+import {initReviewsSlider} from './modules/sliders/reviews-slider';
 
 // ---------------------------------
 
@@ -21,12 +22,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    const burger = new Burger();
+    burger.init();
     initCustomSelect();
     initFormValidate();
     initRatesSlider();
     initStepsSlider();
     initReviewsSlider();
+    initModals();
   });
 });
 

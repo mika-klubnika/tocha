@@ -77,3 +77,13 @@
   font-weight: 800;
   color: $color-slate-blue;
 }
+
+.pagination .swiper-pagination-bullet {
+  width:  size-desktop(8px);
+  height:  size-desktop(8px);
+
+  @include vp-1439 {
+    width: 8px;
+    height: 8px;
+  }
+}

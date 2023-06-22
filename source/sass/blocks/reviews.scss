@@ -35,6 +35,10 @@
       width: 330px;
     }
 
+    @include vp-374 {
+      width: 280px;
+    }
+
     h3,
     h4 {
       font-weight: 600;
@@ -117,6 +121,7 @@
       }
     }
   }
+
   &__author {
     display: flex;
     justify-content: center;

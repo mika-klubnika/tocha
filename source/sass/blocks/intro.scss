@@ -3,6 +3,8 @@
   padding-bottom: size-desktop(125px);
   min-height: size-desktop(730px);
 
+  background-color: $color-white-blue;
+
   @include vp-1439 {
     padding-top: 125px;
     padding-bottom: 125px;
@@ -64,7 +66,6 @@
     position: absolute;
     top: size-desktop(-60px);
     right: size-desktop(-20px);
-    z-index: -1;
 
     @include vp-1439 {
       top: -60px;
