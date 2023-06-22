@@ -418,6 +418,7 @@ template {
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
+  padding-bottom: 30px;
 }
 
 .swiper-vertical > .swiper-wrapper {
@@ -437,7 +438,6 @@ template {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
@@ -468,7 +468,6 @@ template {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -490,7 +489,6 @@ template {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -535,25 +533,21 @@ template {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -728,7 +722,6 @@ template {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -862,7 +855,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
@@ -885,7 +877,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms left, 200ms -webkit-transform;
   transition: 200ms left, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left, 200ms -webkit-transform;
 }
@@ -893,7 +884,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 200ms right, 200ms -webkit-transform;
   transition: 200ms right, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
@@ -1087,7 +1077,6 @@ button.swiper-pagination-bullet {
 
 .swiper-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -1108,14 +1097,12 @@ button.swiper-pagination-bullet {
 
 .swiper-fade.swiper-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1234,7 +1221,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   -webkit-transition-property: opacity, height, -webkit-transform;
   transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
   transition-property: transform, opacity, height, -webkit-transform;
 }
@@ -1512,7 +1498,6 @@ button,
 .no-transition {
   /* stylelint-disable-next-line */
   -webkit-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
@@ -1667,7 +1652,6 @@ button,
   opacity: 0;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   pointer-events: none;
@@ -1742,7 +1726,6 @@ button,
 
 .modal--preload {
   -webkit-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -1769,7 +1752,6 @@ button,
   cursor: pointer;
   border-radius: 0.41667vw;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -2111,6 +2093,83 @@ button,
   margin-bottom: 3.125vw;
 }
 
+.reviews {
+  padding-top: 1.38889vw;
+  padding-bottom: 1.38889vw;
+  background-color: rgba(242, 247, 255, 0.5);
+}
+
+.reviews__title {
+  margin-bottom: 3.47222vw;
+  text-align: center;
+}
+
+.reviews__list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.reviews__item {
+  display: -ms-grid;
+  display: grid;
+  width: 37.5vw;
+}
+
+.reviews__item h3,
+.reviews__item h4 {
+  font-weight: 600;
+  font-size: 1.25vw;
+  line-height: 1.94444vw;
+}
+
+.reviews__item h3 {
+  margin-bottom: 0.55556vw;
+}
+
+.reviews__item span {
+  font-size: 0.97222vw;
+}
+
+.reviews__item img {
+  margin-right: 1.04167vw;
+  width: 3.88889vw;
+  height: 3.88889vw;
+  border-radius: 50%;
+}
+
+.reviews__text-block {
+  position: relative;
+  padding: 2.08333vw;
+  margin-bottom: 2.08333vw;
+  text-align: center;
+  border-radius: 0.41667vw;
+  background-color: #ffffff;
+}
+
+.reviews__text-block::after {
+  content: "";
+  position: absolute;
+  bottom: -0.90278vw;
+  left: 50%;
+  width: 1.66667vw;
+  height: 1.66667vw;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.reviews__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -2156,7 +2215,6 @@ button,
   border-radius: 5px;
   outline: none;
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -2182,7 +2240,6 @@ button,
   color: #ff1553;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2224,7 +2281,6 @@ button,
   color: #ff1553;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -2255,7 +2311,6 @@ button,
   height: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -2271,7 +2326,6 @@ button,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -2284,7 +2338,6 @@ button,
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -2301,7 +2354,6 @@ button,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2346,7 +2398,6 @@ button,
   transform: translateY(-50%);
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease, opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
   pointer-events: none;
@@ -2361,7 +2412,6 @@ button,
   transform: translateY(-50%);
   -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease, opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
   pointer-events: none;
@@ -2397,7 +2447,6 @@ button,
   outline: none;
   cursor: pointer;
   -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
 
@@ -2427,7 +2476,6 @@ button,
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
-  -o-transition: visibility 0.3s ease, opacity 0.3s ease;
   transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
@@ -2436,7 +2484,6 @@ button,
   outline: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -2451,7 +2498,6 @@ button,
   color: #ff1553;
   opacity: 0;
   -webkit-transition: opacity 0.1s ease;
-  -o-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
 }
 
@@ -2462,11 +2508,9 @@ button,
   overflow: hidden;
   text-align: left;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease 0.1s;
-  -o-transition: opacity 0.3s ease 0.1s;
   transition: opacity 0.3s ease 0.1s;
 }
 
@@ -2483,7 +2527,6 @@ button,
   background-color: #000000;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   -webkit-clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
@@ -2612,6 +2655,10 @@ button,
 
   .container--inner {
     padding: 0;
+  }
+
+  .container--inner-big {
+    padding: 0 40px;
   }
 
   .header {
@@ -2858,6 +2905,51 @@ button,
   .steps__item p {
     margin-bottom: 45px;
   }
+
+  .reviews {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .reviews__title {
+    margin-bottom: 50px;
+  }
+
+  .reviews__item {
+    width: 540px;
+  }
+
+  .reviews__item h3,
+  .reviews__item h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .reviews__item h3 {
+    margin-bottom: 8px;
+  }
+
+  .reviews__item span {
+    font-size: 14px;
+  }
+
+  .reviews__item img {
+    margin-right: 15px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .reviews__text-block {
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+  }
+
+  .reviews__text-block::after {
+    bottom: -13px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -2954,10 +3046,6 @@ button,
     margin-bottom: 35px;
   }
 
-  .rates__slider {
-    padding-bottom: 30px;
-  }
-
   .rates__item {
     width: 330px;
   }
@@ -2972,14 +3060,10 @@ button,
     padding-left: 50px;
   }
 
-  .steps__slider {
-    padding-bottom: 30px;
-  }
-
   .steps__list {
-    -webkit-box-pack: initial;
-    -ms-flex-pack: initial;
-    justify-content: initial;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .steps__item {
@@ -3012,6 +3096,10 @@ button,
   }
 
   .container--inner {
+    padding: 0;
+  }
+
+  .container--inner-big {
     padding: 0;
   }
 
@@ -3091,6 +3179,20 @@ button,
   .steps__title {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .steps__list {
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+  }
+
+  .reviews__item {
+    width: 330px;
+  }
+
+  .reviews__text-block {
+    padding: 20px;
   }
 }
 

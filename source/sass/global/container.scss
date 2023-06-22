@@ -21,5 +21,15 @@
     @include vp-767 {
       padding: 0;
     }
+
+    &-big {
+      @include vp-1439 {
+        padding: 0 40px;
+      }
+
+      @include vp-767 {
+        padding: 0;
+      }
+    }
   }
 }

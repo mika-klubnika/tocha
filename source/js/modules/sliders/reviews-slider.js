@@ -1,13 +1,13 @@
 /* globals Swiper */
-export const initStepsSlider = () => {
+export const initReviewsSlider = () => {
 
-  const stepsSlider = document.querySelector('[data-steps-slider]');
+  const reviewsSlider = document.querySelector('[data-reviews-slider]');
 
-  if (!stepsSlider) {
+  if (!reviewsSlider) {
     return;
   }
 
-  const swiper = new Swiper(stepsSlider, {
+  const swiper = new Swiper(reviewsSlider, {
     watchOverflow: true,
     roundLengths: true,
     speed: 400,
@@ -21,10 +21,17 @@ export const initStepsSlider = () => {
 
     breakpoints: {
       0: {
+        spaceBetween: 20,
         slidesOffsetBefore: 22,
         slidesOffsetAfter: 22,
       },
       768: {
+        spaceBetween: 20,
+        slidesOffsetBefore: 40,
+        slidesOffsetAfter: 40,
+      },
+      1440: {
+        spaceBetween: 30,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
       },

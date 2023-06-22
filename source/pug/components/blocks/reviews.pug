@@ -1,0 +1,77 @@
+mixin reviews()
+  -
+    const reviewsList = [
+      {
+        review: {
+          title: "Как&nbsp;же удобно!",
+          text: "В&nbsp;рамках спецификации современных стандартов, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической анафеме.",
+        },
+        author: {
+          avatar: ["slides/reviews", "romashka", "png", 56, 56, "Анна Купер"],
+          name: "Анна Купер",
+          email: "romashka.ru",
+        },
+      },
+      {
+        review: {
+          title: "Теперь мы&nbsp;идем в&nbsp;ногу со&nbsp;временем",
+          text: "А&nbsp;ещё интерактивные прототипы превращены в&nbsp;посмешище, хотя само их&nbsp;существование приносит несомненную пользу обществу. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также тщательные исследования конкурентов формируют сеть.",
+        },
+        author: {
+          avatar: ["slides/reviews", "samogon-ont", "png", 56, 56, "Андрей Васильев"],
+          name: "Андрей Васильев",
+          email: "samogon-ont.ru",
+        },
+      },
+      {
+        review: {
+          title: "Lorem ipsum dolor sit.",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatdis nostrum inventore, illo expedita ex repudiandae laudantium reprehenderit at tenetur? Distinctio assumenda est fugiat quia quas obcaecati quaerat nesciunt vitae!Omnis, nihil laudantium vel ab qui eaque sapiente at libero repellendus nesciunt voluptatem dolore, minus amet, blanditiis id. Rer!",
+        },
+        author: {
+          avatar: ["slides/reviews", "avatar", "jpg", 56, 56, "Вася Васильев"],
+          name: "Вася Васильев",
+          email: "mxksm.com",
+        },
+      },
+      {
+        review: {
+          title: "Lorem, ipsum.",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde?",
+        },
+        author: {
+          avatar: ["slides/reviews", "avatar", "jpg", 56, 56, "Алена Аленовна"],
+          name: "Алена Аленовна",
+          email: "aliona-alo.ru",
+        },
+      },
+      {
+        review: {
+          title: "Lorem ipsum dolor sit.",
+          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        author: {
+          avatar:  ["slides/reviews", "avatar", "jpg", 56, 56, "Иван Иванов"],
+          name: "Иван Иванов",
+          email: "iva.ru",
+        },
+      },
+    ]
+
+  section.reviews
+    .container
+      h2.title.title--h2.reviews__title Отзывы клиентов
+    .container.container--inner
+      .reviews__slider.swiper(data-reviews-slider)
+        ul.reviews__list.list.swiper-wrapper
+          each item in reviewsList
+            li.reviews__item.swiper-slide(class=`reviews__step${item.number}`)
+              .reviews__text-block
+                h3.title!= item.review.title
+                p!= item.review.text
+              .reviews__author
+                +img(...item.author.avatar)
+                .reviews__inner
+                  h4.title!= item.author.name
+                  span!= item.author.email
+        .reviews__pagination.swiper-pagination

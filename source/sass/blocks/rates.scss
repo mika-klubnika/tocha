@@ -38,12 +38,6 @@
     }
   }
 
-  &__slider {
-    @include vp-1023 {
-      padding-bottom: 30px;
-    }
-  }
-
   &__list {
     display: flex;
 

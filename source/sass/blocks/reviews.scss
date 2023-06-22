@@ -1,0 +1,125 @@
+.reviews {
+  padding-top: size-desktop(20px);
+  padding-bottom: size-desktop(20px);
+
+  background-color: $color-white-blue;
+
+  @include vp-1439 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: size-desktop(50px);
+    text-align: center;
+
+    @include vp-1439 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  &__item {
+    display: grid;
+    width: size-desktop(540px);
+
+    @include vp-1439 {
+      width: 540px;
+    }
+
+    @include vp-767 {
+      width: 330px;
+    }
+
+    h3,
+    h4 {
+      font-weight: 600;
+      font-size: size-desktop(18px);
+      line-height: size-desktop(28px);
+
+      @include vp-1439 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    h3 {
+      margin-bottom: size-desktop(8px);
+
+      @include vp-1439 {
+        margin-bottom: 8px;
+      }
+    }
+
+    span {
+      font-size: size-desktop(14px);
+
+      @include vp-1439 {
+        font-size: 14px;
+      }
+    }
+
+    img {
+      margin-right: size-desktop(15px);
+      width: size-desktop(56px);
+      height: size-desktop(56px);
+      border-radius: 50%;
+
+      @include vp-1439 {
+        margin-right: 15px;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+
+  &__text-block {
+    position: relative;
+    padding: size-desktop(30px);
+    margin-bottom: size-desktop(30px);
+    text-align: center;
+
+    border-radius: size-desktop(6px);
+    background-color: $color-default-white;
+
+    @include vp-1439 {
+      padding: 30px;
+      margin-bottom: 30px;
+
+      border-radius: 6px;
+    }
+
+    @include vp-767 {
+      padding: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: size-desktop(-13px);
+      left: 50%;
+
+      width: size-desktop(24px);
+      height: size-desktop(24px);
+
+      background-color: $color-default-white;
+      transform: translateX(-50%) rotate(45deg);
+
+      @include vp-1439 {
+        bottom: -13px;
+
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__author {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+}
