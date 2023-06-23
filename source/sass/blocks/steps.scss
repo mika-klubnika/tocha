@@ -31,9 +31,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 
     @include vp-1023 {
       justify-content: center;
+      padding-top: 0;
     }
 
     @include vp-767 {
@@ -43,7 +45,7 @@
 
   &__item {
     @include vp-1023 {
-      margin-right: 33px;
+      margin-right: 25px;
 
       &:last-child {
         margin-right: 0;
@@ -73,6 +75,7 @@
   }
 
   &__step2 {
+    position: relative;
     padding-top: size-desktop(70px);
     width: size-desktop(281px);
 
@@ -91,6 +94,53 @@
 
       @include vp-1439 {
         width: 276px;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: size-desktop(-25px);
+      z-index: -1;
+
+      width: size-desktop(360px);
+      height: size-desktop(150px);
+
+      background-repeat: no-repeat;
+
+      @include vp-1439 {
+        top: -25px;
+
+        width: 360px;
+        height: 150px;
+
+      }
+
+      @include vp-1023 {
+        display: none;
+      }
+    }
+
+    &::before {
+      left: size-desktop(-250px);
+      background-image: url(../img/svg/plane1.svg);
+      background-size: size-desktop(357px) size-desktop(240px);
+
+      @include vp-1439 {
+        left: -250px;
+        background-size: 357px 240px;
+      }
+    }
+
+    &::after {
+      right: size-desktop(-250px);
+      background-image: url(../img/svg/plane2.svg);
+      background-size: size-desktop(350px) size-desktop(167px);
+
+      @include vp-1439 {
+        right: -250px;
+        background-size: 350px 167px;
       }
     }
   }

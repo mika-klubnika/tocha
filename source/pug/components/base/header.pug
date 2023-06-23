@@ -23,8 +23,9 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods, data-header)
     .container
       +logo().logo--header
-      button.header__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-burger)
-        +icon("burger", 30, 20)
+      button.header__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-burger)
+        +icon("burger", 30, 20).open
+        +icon("close", 28, 28).close
       nav.main-nav
         .main-nav__wrapper
           ul.main-nav__list.authorized__nav.list

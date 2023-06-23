@@ -26,7 +26,6 @@ block main
     }
 
     img {
-      width: 100%;
       max-width: 300px;
       height: auto;
       display: block;
@@ -56,13 +55,13 @@ block main
       },
       {
         name: "Главная (авторизованный пользователь) — index-v2.html",
-        src: "index.html"
+        src: "index-v2.html"
       },
     ]
 
   main
     .container
-      img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
+      img(src="img/content/logo.png" width="81" height="59" alt="Логотип проекта")
       h1 Список страниц
       ol
         each page in pages

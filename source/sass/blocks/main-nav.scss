@@ -1,6 +1,34 @@
 .main-nav {
   @include vp-767 {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 90px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    background-color: $color-default-white;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
+  }
+
+  &__wrapper {
+    @include vp-767 {
+      padding: 0 30px 60px;
+    }
   }
 
   &__item {
@@ -14,6 +42,10 @@
       margin-right: 24px;
     }
 
+    @include vp-767 {
+      margin-bottom: 25px;
+    }
+
     a {
       font-size: size-desktop(20px);
       line-height: size-desktop(26px);
@@ -21,6 +53,19 @@
       @include vp-1439 {
         font-size: 16px;
         line-height: 24px;
+      }
+
+      @media (hover: hover),
+      screen and (min-width: 0\0) {
+
+        &:hover,
+        &:focus {
+          opacity: 0.7;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
       }
     }
   }
@@ -32,6 +77,16 @@
       margin-right: 12px;
     }
 
+    @include vp-767 {
+      margin-right: 0;
+      margin-bottom: 15px;
+
+      a {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -41,6 +96,10 @@
 .authorized {
   .authorized__nav {
     display: flex;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
   }
 
   .not-authorized__nav {
@@ -55,5 +114,9 @@
 
   .not-authorized__nav {
     display: flex;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
   }
 }
