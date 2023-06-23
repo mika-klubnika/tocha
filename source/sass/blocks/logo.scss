@@ -14,7 +14,7 @@
       line-height: 21px;
     }
 
-    svg {
+    img {
       display: block;
       width: size-desktop(55px);
       height: size-desktop(42px);
@@ -31,14 +31,14 @@
     font-size: size-desktop(32px);
     line-height: size-desktop(24px);
 
-    color: #FFFFFF;
+    color: $color-default-white;
 
     @include vp-1439 {
       font-size: 32px;
       line-height: 24px;
     }
 
-    svg {
+    img {
       margin-bottom: size-desktop(10px);
       display: block;
       width: size-desktop(81px);

@@ -10,20 +10,20 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-dark:                        #1D2530;
-$color-black-pearl:                 #141B23;
-$color-black-zodiac:                #474A57;
-$color-slate-blue:                  #685ED6;
-$color-perfume:                     #C39BFB;
-$color-summer-sky:                  #33AFE1;
-$color-bright-turquoise:            #18E1F7;
-$color-magnolia:                    #F1E4FF;
-$color-solitude:                    #F4F5F7;
-$color-silver:                      #C4C4C4;
-$color-solitude2:                   #EEEFF4;
-$color-alice-blue:                  #FCFEFF;
+$color-dark:                        #1d2530;
+$color-black-pearl:                 #141b23;
+$color-black-zodiac:                #474a57;
+$color-slate-blue:                  #685ed6;
+$color-perfume:                     #c39bfb;
+$color-summer-sky:                  #33afe1;
+$color-bright-turquoise:            #18e1f7;
+$color-magnolia:                    #f1e4ff;
+$color-solitude:                    #f4f5f7;
+$color-silver:                      #c4c4c4;
+$color-solitude2:                   #eeeff4;
+$color-alice-blue:                  #fcfeff;
 $color-light-blue:                  rgba(104, 94, 214, 0.05);
-$color-white-blue:                  rgba(242, 247, 255, 0.50);
+$color-white-blue:                  rgba(242, 247, 255, 0.5);
 
 // Gradient
 
@@ -31,8 +31,8 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 
 // Shadow
 
-$shadow-black-07:                   0px 10px 20px rgba(0, 0, 0, 0.07);
-$shadow-black-14:                   0px 15px 30px rgba(0, 0, 0, 0.14);
+$shadow-black-07:                   0 10px 20px rgba(0, 0, 0, 0.07);
+$shadow-black-14:                   0 15px 30px rgba(0, 0, 0, 0.14);
 
 // Typography
 // ---------------------------------
@@ -42,8 +42,6 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
-
 $ff-default:                        "Gilroy", "Arial", sans-serif;
 
 // Animation

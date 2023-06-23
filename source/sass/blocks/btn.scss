@@ -25,9 +25,7 @@
     background-color: $color-magnolia;
     box-shadow: $shadow-black-07;
 
-    @media (hover: hover),
-    screen and (min-width: 0\0) {
-
+    @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
         background-color: $color-perfume;
@@ -45,13 +43,11 @@
     background-color: $color-slate-blue;
     box-shadow: $shadow-black-07;
 
-    @media (hover: hover),
-    screen and (min-width: 0\0) {
-
+    @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
         background-color: $color-summer-sky;
-        box-shadow:$shadow-black-14;
+        box-shadow: $shadow-black-14;
       }
     }
 

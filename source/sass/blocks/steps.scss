@@ -43,16 +43,6 @@
     }
   }
 
-  &__item {
-    @include vp-1023 {
-      margin-right: 25px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
   &__step1,
   &__step3 {
     width: size-desktop(237px);
@@ -114,7 +104,6 @@
 
         width: 360px;
         height: 150px;
-
       }
 
       @include vp-1023 {
@@ -124,7 +113,7 @@
 
     &::before {
       left: size-desktop(-250px);
-      background-image: url(../img/svg/plane1.svg);
+      background-image: url("../img/svg/plane1.svg");
       background-size: size-desktop(357px) size-desktop(240px);
 
       @include vp-1439 {
@@ -135,7 +124,7 @@
 
     &::after {
       right: size-desktop(-250px);
-      background-image: url(../img/svg/plane2.svg);
+      background-image: url("../img/svg/plane2.svg");
       background-size: size-desktop(350px) size-desktop(167px);
 
       @include vp-1439 {
@@ -178,6 +167,14 @@
     align-items: center;
 
     text-align: center;
+
+    @include vp-1023 {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
     h3 {
       margin-bottom: size-desktop(5px);

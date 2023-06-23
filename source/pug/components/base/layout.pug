@@ -11,11 +11,12 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="description", content="ProjectName — описание")
-    //- генерируйте favicon тут - https://realfavicongenerator.net/
-    //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
 
     //- используйте только для шрифта находящегося на первом экране
-    //- link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/gilroy/Gilroy-Regular.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/gilroy/Gilroy-Bold.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/gilroy/Gilroy-Extrabold.woff2", as="font", crossorigin="anonymous")
     link(rel="stylesheet", href="css/style.min.css")
 
   body
@@ -28,8 +29,6 @@ html(lang="ru")
 
       if (hasFooter)
         +footer(footerMods)
-
-    block modals
 
     script(src="js/vendor.min.js")
     script(src="js/main.min.js")
